@@ -32,23 +32,37 @@ public class DayFive {
 	}
 	
 	public static boolean naughtyOrNiceRevised(String line) {
-		int vowelTotal = 0;
 		boolean pairs = false;
+		boolean repeat = false;
 		
-		for(int i = 0; i < line.length(); i++) {
-			char c = line.charAt(i);
+		int pairIndex = 0;
+		
+		for(int i = 0; i < line.length()-2; i++) {
+			String pair1 = line.substring(i, i+2);
+			pairIndex = i + 2;
 			
-			if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u')
-				vowelTotal++;
-			if(i >= 1) {
-				if(line.charAt(i-1)== c) pairs = true;
-				String pair = "" + line.charAt(i-1) + c;
-				if(pair.equals("ab") || pair.equals("cd") || pair.equals("pq") || pair.equals("xy"))
-					return false;
-
+			while(pairIndex < line.length() - 1) {
+				String pair2 = line.substring(pairIndex, pairIndex+2);
+				if(pair1.equals(pair2)) {
+					System.out.println(pair1 + " " + pair2);
+					pairs = true;
+					break;
+				}
+				pairIndex++;
+			}
+			
+			if(pairs)
+				break;
+		}
+		
+		for(int i = 1; i < line.length() - 1; i++) {
+			if(line.charAt(i-1) == line.charAt(i+1)) {
+				repeat = true;
+				break;
 			}
 		}
-		return vowelTotal >= 3 && pairs;
+		
+		return pairs && repeat;
 		
 	}
 

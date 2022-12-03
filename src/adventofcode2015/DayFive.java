@@ -66,6 +66,7 @@ public class DayFive {
 			}
 			
 			System.out.println(count);
+			System.out.println(count2);
 			
 		} catch(IOException e) {
 			System.out.println(e.getMessage());

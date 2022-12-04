@@ -6,7 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
 
-public class DayTwo {
+public class Day2 {
 	public static int partOne(String[] round) {
 		// Rock - A/X
 		// Paper - B/Y

@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class DayFive {
+public class Day5 {
 	
 	public static boolean naughtyOrNice(String line) {
 		int vowelTotal = 0;

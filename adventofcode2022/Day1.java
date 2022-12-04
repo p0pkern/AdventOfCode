@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.PriorityQueue;
 
 
-public class DayOne {
+public class Day1 {
 	public static void main(String[] args) {
 		// A max heap to keep the totals in highest to lowest order for part 2
 		PriorityQueue<Integer> queue = new PriorityQueue<>((a, b) -> b - a);

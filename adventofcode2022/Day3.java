@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class DayThree {
+public class Day3 {
 	
 	private static int evaluateLetter(Character c) {
 		if(Character.isUpperCase(c))
